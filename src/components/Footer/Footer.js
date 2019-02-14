@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () => (
-  <footer className="footer">
+const Footer = props => (
+  <footer className="footer" style={{ backgroundImage: `url(${props.backgroundImage})`}}>
     <span>Loteria Memoria</span>
   </footer>
 );

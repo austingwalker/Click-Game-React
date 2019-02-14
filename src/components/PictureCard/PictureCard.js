@@ -4,10 +4,8 @@ import "./PictureCard.css";
 const PictureCard = props => (
   <div className="pictures">
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
+      <img alt={props.name} src={props.image} onClick={() => props.pictureClicked(props.id)}/>
     </div>
-    <span onClick={() => props.countPicture()} className="count">
-    </span>
   </div>
 );
 

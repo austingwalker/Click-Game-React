@@ -2,63 +2,74 @@
   {
     "id": 1,
     "name": "Rose",
-    "image": "https://66.media.tumblr.com/d4aa584a021e36191be5f587e2f4d7f6/tumblr_nsyfaoOVmI1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/d4aa584a021e36191be5f587e2f4d7f6/tumblr_nsyfaoOVmI1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 2,
     "name": "Crown",
-    "image": "https://66.media.tumblr.com/a4f9910398aa5d3d25ca5ac92f86239b/tumblr_na8bfiSdfP1rshw4wo1_r1_1280.jpg"
+    "image": "https://66.media.tumblr.com/a4f9910398aa5d3d25ca5ac92f86239b/tumblr_na8bfiSdfP1rshw4wo1_r1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 3,
     "name": "Moon",
-    "image": "https://66.media.tumblr.com/c9f6e5aded24705eedad08a925d02e34/tumblr_nt0d7aEGZS1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/c9f6e5aded24705eedad08a925d02e34/tumblr_nt0d7aEGZS1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 4,
     "name": "Watermelon",
     "image": "https://66.media.tumblr.com/2b935f829e43571f874ca0a8f5273c26/tumblr_nerkth88Tt1rshw4wo1_1280.jpg",
-    "occupation": "Boy Genius",
-    "location": "A Secret Laboratory"
+    "clicked" : false
+    
   },
   {
     "id": 5,
     "name": "Deer",
-    "image": "https://66.media.tumblr.com/c89c5c437465a1a34d696c17e54e3df3/tumblr_na8djn04hQ1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/c89c5c437465a1a34d696c17e54e3df3/tumblr_na8djn04hQ1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 6,
     "name": "Gentleman",
-    "image": "https://66.media.tumblr.com/5edb3bfa9c71416eec64bd270e0acf8a/tumblr_nahs2wQKvV1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/5edb3bfa9c71416eec64bd270e0acf8a/tumblr_nahs2wQKvV1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 7,
     "name": "Lady",
-    "image": "https://66.media.tumblr.com/dd06ce70e65b7510b695bb70a1348c08/tumblr_nahu68Voop1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/dd06ce70e65b7510b695bb70a1348c08/tumblr_nahu68Voop1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 8,
     "name": "Tree",
-    "image": "https://66.media.tumblr.com/9740c89658ce9d3041172d33a22727ac/tumblr_nei0nuGERl1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/9740c89658ce9d3041172d33a22727ac/tumblr_nei0nuGERl1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 9,
     "name": "Arrows",
-    "image": "https://66.media.tumblr.com/f8805d50a2d02118776f333d6109bf85/tumblr_nex09gGA7B1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/f8805d50a2d02118776f333d6109bf85/tumblr_nex09gGA7B1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 10,
     "name": "Ladder",
-    "image": "https://66.media.tumblr.com/792962b91ea6347cc0ebacb2312014e5/tumblr_nahwawjVW01rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/792962b91ea6347cc0ebacb2312014e5/tumblr_nahwawjVW01rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 11,
     "name": "Hand",
-    "image": "https://66.media.tumblr.com/91947a326f0a0c1e5aa83cb7b2a584c5/tumblr_nac2809Nlh1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/91947a326f0a0c1e5aa83cb7b2a584c5/tumblr_nac2809Nlh1rshw4wo1_1280.jpg",
+    "clicked" : false
   },
   {
     "id": 12,
     "name": "Chicken",
-    "image": "https://66.media.tumblr.com/d6fa6a934609a9469c9cbc17e337f567/tumblr_nac5tjimAk1rshw4wo1_1280.jpg"
+    "image": "https://66.media.tumblr.com/d6fa6a934609a9469c9cbc17e337f567/tumblr_nac5tjimAk1rshw4wo1_1280.jpg",
+    "clicked" : false
   }
 ]
