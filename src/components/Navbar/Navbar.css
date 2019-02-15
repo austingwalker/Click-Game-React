@@ -1,5 +1,5 @@
 .navbar {
-  background: #FF8C00;
+  background: orangered;
   /* min-height: 70px; */
   height: 70px;
   position: fixed;
@@ -9,6 +9,7 @@
   font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
   z-index: 99;
   white-space: nowrap;
+ 
 }
 
 .navbar ul {
@@ -21,7 +22,7 @@
   padding: 26px 0px;
   width: 33.3%;
   text-align: center;
-  margin-right: 120px;
+  margin-right: 100px;
 }
 
 .navbar a {

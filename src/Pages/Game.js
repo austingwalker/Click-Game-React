@@ -7,7 +7,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import pictures from "../pictures.json";
-// import API from "../utils/API";
+
 
 
 class Game extends Component {
@@ -16,44 +16,71 @@ class Game extends Component {
     score: 0,
     topScore: 0
   };
-
+//////////////////////////////////////////////////////////////////////////////////
   handleCorrectGuess = newData => {
-    console.log(newData);
-    this.setState({ score: this.state.score + 1 })
-    this.shuffleData(this.state.pictures)
+
+    const { topScore, score } = this.state;
+    if (score === 11) {
+      alert(`You won! 
+congratulations!`)
+      this.setState({
+        pictures: this.resetPictures(newData),
+        score: 0
+      })
+    } else {
+      const newScore = score + 1;
+      const newTopScore = Math.max(newScore, topScore);
+
+
+      this.setState({
+        pictures: this.shufflePictures(newData),
+        score: newScore,
+        topScore: newTopScore
+      })
+    }
+
   }
 
-////Left off here ------------------------------------------------
-//   handleIncorrectGuess = newData => {
-//     console.log(newData);
-//     this.setState({ score: this.state.score + 1 })
-//     this.shuffleData(this.state.pictures)
-//   }
+  handleIncorrectGuess = data => {
+    alert(`Oops! You guessed wrong, your score was ${this.state.score} - try again!`)
+    this.setState({
+      pictures: this.resetPictures(data),
+      score: 0
+    })
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+  resetPictures = data => {
+    const resetPics = data.map(pic => ({ ...pic, clicked: false }))
+    return this.shufflePictures(resetPics);
+  
+  }
 
+
+  //////////////////////////////////////////////////////////////////////////////////
   pictureClicked = (id) => {
 
     let guessedCorrectly = false;
     const newData = this.state.pictures.map(item => {
-        const newItem = { ...item };
-        if(newItem.id === id) {
-            if(!newItem.clicked){
-                newItem.clicked = true;
-                guessedCorrectly = true;
-            }
+      const newItem = { ...item };
+      if (newItem.id === id) {
+        if (!newItem.clicked) {
+          newItem.clicked = true;
+          guessedCorrectly = true;
         }
-        return newItem;
+      }
+      return newItem;
     });
-    guessedCorrectly 
-        ? this.handleCorrectGuess(newData)
-        : this.handleIncorrectGuess(newData)
+    guessedCorrectly
+      ? this.handleCorrectGuess(newData)
+      : this.handleIncorrectGuess(newData)
   };
 
-
+  //////////////////////////////////////////////////////////////////////////////////
   componentDidMount() {
-    this.setState({pictures: this.shuffleData(this.state.pictures)});
+    this.setState({ pictures: this.shufflePictures(this.state.pictures) });
   }
-
-  shuffleData = pictures => {
+  //////////////////////////////////////////////////////////////////////////////////
+  shufflePictures = pictures => {
     let i = pictures.length - 1;
     while (i > 0) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -64,40 +91,29 @@ class Game extends Component {
     }
     return pictures;
   };
-
-
-
-    
-  
-
-
+  //////////////////////////////////////////////////////////////////////////////////
   render() {
     return (
       <div>
-        <Navbar score={this.state.score}/>
+        <Navbar score={this.state.score} topScore={this.state.topScore} />
         <Title backgroundImage="http://i64.tinypic.com/f9gl00.jpg">
-          
           <h2>Click on an image to earn points, but don't click on any of them more than once!</h2>
         </Title>
-        
-          <Container>
-           <Row>
-             <Col size="md-10">
-                {this.state.pictures.map(picture => (
-                  <PictureCard
-                    
-                    id={picture.id}
-                    key={picture.id}
-                    image={picture.image}
-                    pictureClicked={this.pictureClicked}
-                    
-                  />
-                ))}
-                </Col>
-            </Row>
-          </Container>
-        
-        <Footer backgroundImage="http://i64.tinypic.com/f9gl00.jpg"/>
+        <Container>
+          <Row>
+            <Col size="md-10">
+              {this.state.pictures.map(picture => (
+                <PictureCard
+                  id={picture.id}
+                  key={picture.id}
+                  image={picture.image}
+                  pictureClicked={this.pictureClicked}
+                />
+              ))}
+            </Col>
+          </Row>
+        </Container>
+        <Footer backgroundImage="http://i64.tinypic.com/f9gl00.jpg" />
       </div>
     );
   }

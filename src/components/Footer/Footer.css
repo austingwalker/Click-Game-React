@@ -3,6 +3,7 @@
   /* background: #E5E5E5; */
   position: relative;
   color: white;
+  border-radius: 25px 25px  0px 0px;
   
 
  
@@ -15,10 +16,13 @@
   left: 0;
   right: 0;
   padding: 3px;
-  background: #FF8C00;
-  font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
+  padding-left: 30px;
+  background: orangered;
+  font-size: calc(5px + (24 - 10) * (100vw - 320px) / (1200 - 400));
   box-shadow:  0px -14px 28px rgba(0, 0, 0, 0.25), 0px -10px 10px rgba(0, 0, 0, 0.22);
- 
+
+  font-weight: 900;
+
 }
 
 
