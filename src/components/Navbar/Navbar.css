@@ -9,12 +9,15 @@
   font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
   z-index: 99;
   white-space: nowrap;
+
  
 }
 
 .navbar ul {
   margin: 0;
   padding: 0;
+  
+ 
 }
 
 .navbar li {
@@ -29,6 +32,10 @@
   text-decoration: none;
   color: white;
   font-weight: 900;
+}
+
+.otherNav {
+  margin-bottom: 30px;
 }
 
 @media (max-width: 420px) {

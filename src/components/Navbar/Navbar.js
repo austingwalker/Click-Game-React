@@ -6,11 +6,11 @@ import NavMessage from ".././NavMessage";
 const Navbar = props => (
   <nav className="navbar">
   <ul>
-    <li className="brand">
+    <li>
       <a href="/">Loteria Memoria</a>
     </li>
     <NavMessage score={props.score} topScore={props.topScore} />
-    <li>
+    <li className="score">
       Score: {props.score} | Top Score: {props.topScore}
     </li>
   </ul>
